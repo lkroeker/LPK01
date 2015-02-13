@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/main_button1_string"
-        android:id="@+id/button"
+        android:id="@+id/startNotiButton"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="89dp" />
@@ -29,8 +29,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/main_button2_string"
-        android:id="@+id/button2"
-        android:layout_below="@+id/button"
+        android:id="@+id/stopNotiButton"
+        android:layout_below="@+id/startNotiButton"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

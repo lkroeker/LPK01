@@ -29,7 +29,7 @@ public class SettingsActivity extends ActionBarActivity {
         RelativeLayout settings_view = (RelativeLayout) findViewById(R.id.settings_view);
 
         switch(item.getItemId()){
-            case R.id.menu_pink:
+            case R.id.pinkSettingsButton:
                 if(item.isChecked())
                     item.setChecked(false);
                 else
@@ -37,7 +37,7 @@ public class SettingsActivity extends ActionBarActivity {
                 settings_view.setBackgroundColor(Color.rgb(255, 89, 177));
                 return true;
 
-            case R.id.menu_yellow:
+            case R.id.yellowSettingsButton:
                 if(item.isChecked())
                     item.setChecked(false);
                 else
@@ -45,7 +45,7 @@ public class SettingsActivity extends ActionBarActivity {
                 settings_view.setBackgroundColor(Color.YELLOW);
                 return true;
 
-            case R.id.menu_green:
+            case R.id.greenSettingsButton:
                 if(item.isChecked())
                     item.setChecked(false);
                 else
@@ -53,7 +53,7 @@ public class SettingsActivity extends ActionBarActivity {
                 settings_view.setBackgroundColor(Color.GREEN);
                 return true;
 
-            case R.id.menu_orange:
+            case R.id.defaultSettingsButton:
                 if(item.isChecked())
                     item.setChecked(false);
                 else

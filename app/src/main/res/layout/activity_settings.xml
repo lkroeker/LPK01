@@ -13,39 +13,42 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/settings_h1_string"
         android:id="@+id/textView"
-        android:layout_above="@+id/radioButton"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/settings_btn_1"
-        android:id="@+id/radioButton"
-        android:layout_centerVertical="true"
+        android:id="@+id/defaultSettingsButton"
+        android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/settings_btn_2"
-        android:id="@+id/radioButton2"
-        android:layout_below="@+id/radioButton"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/yellowSettingsButton"
+        android:layout_below="@+id/defaultSettingsButton"
+        android:layout_alignLeft="@+id/greenSettingsButton"
+        android:layout_alignStart="@+id/greenSettingsButton" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/settings_btn_3"
-        android:id="@+id/radioButton3"
-        android:layout_below="@+id/radioButton2"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/greenSettingsButton"
+        android:layout_below="@+id/yellowSettingsButton"
+        android:layout_alignLeft="@+id/pinkSettingsButton"
+        android:layout_alignStart="@+id/pinkSettingsButton" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/settings_btn_4"
-        android:id="@+id/radioButton4"
-        android:layout_below="@+id/radioButton3"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/pinkSettingsButton"
+        android:layout_below="@+id/greenSettingsButton"
+        android:layout_alignLeft="@+id/defaultSettingsButton"
+        android:layout_alignStart="@+id/defaultSettingsButton" />
 
 </RelativeLayout>
