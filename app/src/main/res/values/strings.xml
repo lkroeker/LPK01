@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LPK01</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="new_lpk_notification_title_template">New lpk: %1$s</string>
+    <string name="new_lpk_notification_placeholder_text_template">You said %1$s</string>
+    <string name="action_share">Share</string>
+    <string name="action_reply">Reply</string>
+    <string name="green_string">Green</string>
+    <string name="pink_string">Pink</string>
+    <string name="yellow_string">Yellow</string>
+    <string name="orange_string">Default</string>
+    <string name="about_string">About</string>
+    <string name="settings_string">Settings</string>
+    <string name="center_string">This is centered</string>
+    <string name="main_button1_string">Start notification</string>
+    <string name="main_button2_string">Stop notification</string>
+
+    <string name="settings_btn_1">Default</string>
+    <string name="settings_btn_2">Yellow</string>
+    <string name="settings_btn_3">Green</string>
+    <string name="settings_btn_4">Pink</string>
+    <string name="settings_h1_string">App background colour</string>
+
+</resources>
