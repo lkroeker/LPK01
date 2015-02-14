@@ -1,27 +1,56 @@
 package ca.lukeandlaura.lpk01;
 
-import android.app.Activity;
+//import android.app.Activity;
 import android.graphics.Color;
 import android.preference.PreferenceFragment;
-import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBarActivity;
+//import android.preference.PreferenceManager;
+//import android.support.v4.app.FragmentActivity;
+//import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+//import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements HomeFrag.OnFragmentInteractionListener{
+
+    public void onFragmentInteraction(String string){
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
-        getFragmentManager().beginTransaction()
-                .replace(android.R.id.content, new SettingsFragment())
-                .commit();
+
+        // Check that the activity is using the layout version with
+        // the fragment_container FrameLayout
+        if (findViewById(R.id.fragment_container) != null) {
+
+            // However, if we're being restored from a previous state,
+            // then we don't need to do anything and should return or else
+            // we could end up with overlapping fragments.
+            if (savedInstanceState != null) {
+                return;
+            }
+
+            // Create a new Fragment to be placed in the activity layout
+            HomeFrag firstFragment = new HomeFrag();
+
+            // In case this activity was started with special instructions from an
+            // Intent, pass the Intent's extras to the fragment as arguments
+            firstFragment.setArguments(getIntent().getExtras());
+
+            // Add the fragment to the 'fragment_container' FrameLayout
+            getFragmentManager().beginTransaction().add(R.id.fragment_container, firstFragment).commit();
+        }
     }
+
+
+    //PreferenceManager.setDefaultValues(this, R.xml.fragmented_preferences_inner, false);
+   // }
 
 
     @Override
@@ -37,8 +66,8 @@ public class MainActivity extends ActionBarActivity {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
-            // Load the preferences from an XML resource
-            addPreferencesFromResource(R.xml.preferences);
+            // Load the fragmented_preferences_inner from an XML resource
+            addPreferencesFromResource(R.xml.fragmented_preferences_inner);
         }
 
     }
@@ -80,6 +109,10 @@ public class MainActivity extends ActionBarActivity {
                     item.setChecked(true);
                 main_view.setBackgroundColor(Color.rgb(242,113,43));
                 return true;
+            case R.id.menu_settings:
+                getFragmentManager().beginTransaction()
+                        .replace(android.R.id.content, new SettingsFragment())
+                        .commit();
 
             default:
                 return super.onOptionsItemSelected(item);

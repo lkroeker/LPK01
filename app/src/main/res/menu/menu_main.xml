@@ -6,7 +6,7 @@
         app:showAsAction="never"
         android:title="@string/settings_string"
         android:orderInCategory="5"
-
+        android:icon="@drawable/ic_stat_new_lpk"
         />
 
     <group android:checkableBehavior="single">
