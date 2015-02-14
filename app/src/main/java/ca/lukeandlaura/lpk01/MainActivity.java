@@ -43,7 +43,7 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-
+    //Menu items change background colour
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         RelativeLayout main_view = (RelativeLayout) findViewById(R.id.main_view);
