@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="entries_list_preference">
-        <item>first</item>
-        <item>second</item>
-        <item>third</item>
-        <item>fourth</item>
-        <item>fifth</item>
+        <item>Default (Grey)</item>
+        <item>Green</item>
+        <item>Orange</item>
+        <item>Pink</item>
+        <item>Yellow</item>
     </string-array>
     <string-array name="entryvalues_list_preference">
-        <item>false</item>
-        <item>true</item>
-        <item>false</item>
-        <item>false</item>
-        <item>true</item>
+        <item >#EEEEEE</item>
+        <item >#00FF00</item>
+        <item >#F2712B</item>
+        <item >#FF59B1</item>
+        <item >#FFFF00</item>
     </string-array>
 </resources>

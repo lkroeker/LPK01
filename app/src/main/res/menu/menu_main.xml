@@ -5,10 +5,15 @@
         android:id="@+id/menu_settings"
         app:showAsAction="never"
         android:title="@string/settings_string"
-        android:orderInCategory="5"
-        android:icon="@drawable/ic_stat_new_lpk"
-        />
+        android:orderInCategory="1"
+        android:icon="@drawable/ic_stat_new_lpk"/>
 
+    <item
+        android:id="@+id/menu_about"
+        app:showAsAction="never"
+        android:title="@string/about_string"
+        android:orderInCategory="2"/>
+<!--
     <group android:checkableBehavior="single">
 
         <item
@@ -27,16 +32,12 @@
             app:showAsAction="never"
             android:title="@string/yellow_string" />
         <item
-            android:id="@+id/menu_orange"
+            android:id="@+id/menu_white"
             android:orderInCategory="4"
             app:showAsAction="never"
             android:title="@string/orange_string" />
 
     </group>
+-->
 
-    <item android:id="@+id/menu_about"
-        app:showAsAction="never"
-        android:title="@string/about_string"
-        android:orderInCategory="6"
-        />
 </menu>
